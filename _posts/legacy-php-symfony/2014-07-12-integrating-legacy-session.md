@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: post-en
 category : "en"
 title: How to interface with legacy $_SESSION
-tags: [php, symfony2, legacy, cookbook]
+tags: [development, php, symfony2, legacy, cookbook]
 ---
 {% include JB/setup %}
 

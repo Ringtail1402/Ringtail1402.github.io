@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+</div>
+
+<div class="row post-full">
+  <div class="col-xs-12">
+    <div class="date">
+      <span>{{ page.date | date_to_long_string }}</span>
+    </div>
+    <div class="content">
+      {{ content }}
+    </div>
+
+  {% unless page.tags == empty %}
+    <ul class="tag_box inline">
+      <li><i class="glyphicon glyphicon-tag"></i></li>
+      {% assign tags_list = page.tags %}
+      {% include JB/tags_list %}
+    </ul>
+  {% endunless %}  
+  
+    <hr>
+    <ul class="pagination">
+      <li><a href="{{ BASE_PATH }}/en.html">&larr; Archive</a></li>
+    </ul>
+    <hr>
+    {% include JB/comments %}
+  </div>
+</div>

@@ -14,7 +14,10 @@ Lead Developer at <a href="http://vps2fast.com/">FastVPS</a><br>
 St. Petersburg, Russia</big>
 
 <h3><a href="{{ BASE_PATH }}/en.html">Blog (in English)</a><br><small>Symfony development, working with legacy code</small></h3>
-<h3><a href="http://github.com/Ringtail1402">GitHub</a><br><small>Личные проекты</small></h3>
+<h3><a href="{{ BASE_PATH }}/about-en.html">About Me</a></h3>
+<hr>
+<h3><a href="http://github.com/Ringtail1402">GitHub</a><br><small>Personal projects</small></h3>
+<h3><a href="https://www.facebook.com/alexander.ulyanov.90">Facebook</a><br><small>Just in case</small></h3>
 
 </div>
 <div class="col-md-6 text-left">
@@ -25,8 +28,12 @@ St. Petersburg, Russia</big>
 Ведущий разработчик в компании <a href="http://fastvps.ru/">FastVPS</a><br>
 Санкт-Петербург, Россия</big>
 
+<h3><span class="text-muted">Блог (на русском)</span><br><small>Разработка и прочее</small></h3>
+<h3><a href="{{ BASE_PATH }}/about-ru.html">Обо мне</a></h3>
+<hr>
 <h3><a href="http://github.com/Ringtail1402">GitHub</a><br><small>Личные проекты</small></h3>
 <h3><a href="https://vk.com/ringtail">ВК</a><br><small>Фотоотчеты и для связи</small></h3>
+<p class="text-muted"><small>а еще здесь когда-то был бложик с фоточками, но его больше нет :(</small></p>
 
 </div>
 </div>

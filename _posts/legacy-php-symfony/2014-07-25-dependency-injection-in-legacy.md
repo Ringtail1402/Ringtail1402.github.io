@@ -1,8 +1,8 @@
 ---
 layout: post-en
 category : "en"
-title: How to use Symfony Dependency Injection in legacy code
-tags: [development, php, symfony2, legacy, cookbook]
+title: "Symfony and Legacy Code: Calling from legacy code to Symfony via DI container"
+tags: [php, symfony2, symfony-legacy]
 ---
 {% include JB/setup %}
 
@@ -15,7 +15,7 @@ bundle semantic configuration and whatnot.  In my first Symfony 2 project,
 I was thoroughly confused by Dependency Injection (along with Doctrine's
 data mapper semantics) and ended up treating classes in `DependencyInjection`
 namespaces and YAML configs as magic incantations.  I began to realize what
-DI was all about only after I wrote a sizable application based on
+DI was all about only after I wrote a [sizable application][mockingbird] based on
 [Silex][silex] with its trivial Pimple container.  And for a large
 application like our LegacyApp, DI is simply indispensable.
 
@@ -32,7 +32,8 @@ as "service locator" to retrieve random services whenever we feel like it.
 
 Apart from consistency, a great reason to use Symfony DI is that it is
 fairly simple and clean to call services from legacy code.  We have already
-looked at some examples of calling legacy code from Symfony layer, but
+looked at [some examples]({% post_url legacy-php-symfony/2014-07-22-symfony-legacy-bridge %})
+of calling legacy code from Symfony layer, but
 in real life, the opposite is often necessary as well.  For example, we may have
 just refactored some legacy `invoicegeneration.php` code with a bunch
 of functions to a shiny new `InvoiceGenerator` class, registered via DI
@@ -174,3 +175,4 @@ Even better.  Now, assuming you use PhpStorm, you may eventually do a
 functions are going to be very helpful for our glue code.
 
 [silex]: http://silex.sensiolabs.org/
+[mockingbird]: https://github.com/Ringtail1402/mockingbird

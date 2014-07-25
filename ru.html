@@ -1,0 +1,16 @@
+---
+layout: page
+title : Русский блог
+header : Русский блог
+#group: navigation
+---
+{% include JB/setup %}
+
+{% for category in site.categories %}
+    {% if category[0] == 'ru' %}
+        <ul>
+            {% assign posts_collate = category[1] %}
+            {% include JB/posts_collate %}
+        </ul>
+    {% endif %}
+{% endfor %}

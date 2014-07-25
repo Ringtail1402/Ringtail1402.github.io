@@ -90,3 +90,11 @@ h1, h2, h3, h4 {
 code {
     color: #25974e;
 }
+
+img.img-thumbnail.pull-right {
+    margin-left: 20px;
+}
+
+img.img-thumbnail.pull-left {
+    margin-right: 20px;
+}

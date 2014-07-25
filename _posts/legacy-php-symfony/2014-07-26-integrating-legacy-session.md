@@ -1,12 +1,12 @@
 ---
 layout: post-en
 category : "en"
-title: How to interface with legacy $_SESSION
-tags: [development, php, symfony2, legacy, cookbook]
+title: "Symfony and Legacy Code: Interface with legacy $_SESSION"
+tags: [php, symfony2, symfony-legacy]
 ---
 {% include JB/setup %}
 
-> Our LegacyApp uses built-in Symfony `$_SESSION` facility to store a number
+> Our LegacyApp uses built-in PHP `$_SESSION` facility to store a number
 > of values for user: ID of currently logged-in client and/or admin, hashes
 > of their passwords, shopping cart, value for anti-CSRF token generation,
 > etc.  We would certainly want to have access to these values from Symfony code.
@@ -22,7 +22,7 @@ Making `$_SESSION` and `Session` interoperable requires us to:
 1. Make sure `$_SESSION` and `Session` work with same session which
    is initialized and started in a uniform way;
 
-2. Make sure `$_SESSION` and `Sesssion` APIs are able to access same
+2. Make sure `$_SESSION` and `Session` APIs are able to access same
    values in session.
 
 The first part requires us to decide whether we want session to be started
@@ -40,7 +40,7 @@ framework:
         storage_id: session.storage.php_bridge
 {% endhighlight %}
 
-The downside, of course, is that you now have to make sure to bootstrap your
+The downside, of course, is that you now have to make sure to somehow bootstrap your
 legacy app on every request, so that it would start session before any Symfony code
 tries to touch it.
 
@@ -100,7 +100,7 @@ class LegacyBridge
         /* ... */
     }
 
-    public function enterLegacyApp($filename, $wrap_output = false)
+    public function enterLegacyApp($filename, $skip_buffering = false)
     {
         if (php_sapi_name() != 'cli') {
             $this->session->start();  // this is safe to do even if session is already started

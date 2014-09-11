@@ -15,8 +15,6 @@
 
     <!-- Bootstrap styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Sticky Footer -->
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
 
     <!-- Custom styles -->
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
@@ -49,8 +47,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-3">
-            <div class="sidebar" data-spy="affix" data-offset-top="0" data-offset-bottom="0"
-                 style="position: relative;">
+            <div data-spy="affix" data-offset-top="0" class="sidebar">
                 <a href="{{ HOME_PATH }}"><img src="{{ BASE_PATH }}/assets/ringtail.jpeg" class="raccoon"
                                                alt="Enotogorsk"></a>
 
@@ -121,5 +118,12 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var fixSidebar = function () { $('.sidebar').width($('.sidebar').parent().width()); };
+        fixSidebar();
+        $(window).resize(fixSidebar);
+    });
+</script>
 </body>
 </html>

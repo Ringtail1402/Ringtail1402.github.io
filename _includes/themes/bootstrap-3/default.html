@@ -28,8 +28,8 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
+      <link rel="shortcut icon" href="/favicon.ico">
     <!-- Update these with your own images
-      <link rel="shortcut icon" href="images/favicon.ico">
       <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
       <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
       <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
@@ -64,8 +64,7 @@
                     {% endif %}
                     {% if page.url contains 'blog/' or page.url contains 'en/' or page.url contains 'ru/' %}
                     <li class="list-group-item active">
-                        Blog /
-                        Блог
+                        <a style="color: #fff;" href="{{ BASE_PATH }}/blog/">Blog / Блог</a>
                     </li>
                     {% else %}
                     <li class="list-group-item">

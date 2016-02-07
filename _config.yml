@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 
 # Themes are encouraged to use these universal variables 
@@ -20,6 +20,8 @@ author :
   feedburner : feedname
 
 excerpt_separator: '[more]'
+
+THEME_NAME: bootstrap-3
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

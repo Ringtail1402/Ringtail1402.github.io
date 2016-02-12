@@ -71,10 +71,12 @@
 
 img.img-thumbnail.pull-right {
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 img.img-thumbnail.pull-left {
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .sidebar {
@@ -90,4 +92,8 @@ img.img-thumbnail.pull-left {
 
 .list-group-item.active a {
     color: #aaf;
+}
+
+.clear {
+    clear: both;
 }

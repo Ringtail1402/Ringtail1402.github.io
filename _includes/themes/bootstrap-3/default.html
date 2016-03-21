@@ -71,16 +71,22 @@
                   <a href="{{ BASE_PATH }}/blog/">Blog / Блог</a>
               {% endif %}
               |
-              {% if page.url == '/about-en.html' %}
+              {% if page.url == '/travel' or page.url == '/travel/' or page.url == '/travel/index.html' %}
+                  <b>Travel / Путешествия</b>
+              {% else %}
+                  <a href="{{ BASE_PATH }}/travel/">Travel / Путешествия</a>
+              {% endif %}
+              |
+              {% if page.url == '/about-en/' %}
                   <b>About Me</b>
               {% else %}
-                  <a href="{{ BASE_PATH }}/about-en.html">About Me</a>
+                  <a href="{{ BASE_PATH }}/about-en/">About Me</a>
               {% endif %}
               /
-              {% if page.url == '/about-ru.html' %}
+              {% if page.url == '/about-ru/' %}
                   <b>Обо мне</b>
               {% else %}
-                  <a href="{{ BASE_PATH }}/about-ru.html">Обо мне</a>
+                  <a href="{{ BASE_PATH }}/about-ru/">Обо мне</a>
               {% endif %}
               |
               <a target="_blank" href="http://github.com/Ringtail1402">GitHub</a>
@@ -111,7 +117,7 @@
                         <a href="{{ BASE_PATH }}/">Home / Главная</a>
                     </li>
                     {% endif %}
-                    {% if page.url contains 'blog/' or page.url contains 'en/' or page.url contains 'ru/' %}
+                    {% if page.url contains 'blog/' or page.url contains '/en/' or page.url contains '/ru/' %}
                     <li class="list-group-item active">
                         <a style="color: #fff;" href="{{ BASE_PATH }}/blog/">Blog / Блог</a>
                     </li>
@@ -122,27 +128,27 @@
                     {% endif %}
                     {% if page.url == '/travel' or page.url == '/travel/' or page.url == '/travel/index.html' %}
                     <li class="list-group-item active">
-                        <a style="color: #fff;" href="{{ BASE_PATH }}/travel/">Travel / Путешествия</a>
+                        Travel / Путешествия
                     </li>
                     {% else %}
                     <li class="list-group-item">
                         <a href="{{ BASE_PATH }}/travel/">Travel / Путешествия</a>
                     </li>
                     {% endif %}
-                    {% if page.url == '/about-en.html' %}
+                    {% if page.url contains '/about-en/' %}
                     <li class="list-group-item active">
                         About Me /
-                        <a href="{{ BASE_PATH }}/about-ru.html">Обо мне</a>
+                        <a href="{{ BASE_PATH }}/about-ru/">Обо мне</a>
                     </li>
-                    {% elsif page.url == '/about-ru.html' %}
+                    {% elsif page.url contains '/about-ru/' %}
                     <li class="list-group-item active">
-                        <a href="{{ BASE_PATH }}/about-en.html">About Me</a> /
+                        <a href="{{ BASE_PATH }}/about-en/">About Me</a> /
                         Обо мне
                     </li>
                     {% else %}
                     <li class="list-group-item">
-                        <a href="{{ BASE_PATH }}/about-en.html">About Me</a> /
-                        <a href="{{ BASE_PATH }}/about-ru.html">Обо мне</a>
+                        <a href="{{ BASE_PATH }}/about-en/">About Me</a> /
+                        <a href="{{ BASE_PATH }}/about-ru/">Обо мне</a>
                     </li>
                     {% endif %}
                     <li class="list-group-item">

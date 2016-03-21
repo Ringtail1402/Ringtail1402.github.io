@@ -117,12 +117,22 @@ img.img-thumbnail.pull-left {
     padding-left: 10px;
 }
 
-.bilingual h2, .bilingual h3, .bilingual h4 {
+.bilingual h2, .bilingual h3, .bilingual-threelevel h4 {
     padding-bottom: 3px;
     border-bottom: 1px solid #eee;
 }
 
-a.js {
-    text-decoration: none;
-    border-bottom: 1px dotted #3399f3;
-} 
+.bilingual ul {
+    margin-left: -15px;
+}
+
+.bilingual ul.sub {
+    margin-left: 0;
+}
+
+/* Apparently this makes text not as light in Safari */
+/* This shit is why I don't work in frontend dev */
+body {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+

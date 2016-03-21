@@ -97,3 +97,32 @@ img.img-thumbnail.pull-left {
 .clear {
     clear: both;
 }
+
+.bilingual {
+    width: 100%;
+}
+
+.bilingual td {
+    vertical-align: top;
+}
+
+.bilingual tr td:first-child {
+    width: 50%;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.bilingual tr td:last-child {
+    width: 50%;
+    padding-left: 10px;
+}
+
+.bilingual h2, .bilingual h3, .bilingual h4 {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #eee;
+}
+
+a.js {
+    text-decoration: none;
+    border-bottom: 1px dotted #3399f3;
+} 

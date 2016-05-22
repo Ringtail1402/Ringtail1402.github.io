@@ -136,3 +136,6 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
+ul.spaced li {
+    margin-bottom: 10px;
+}

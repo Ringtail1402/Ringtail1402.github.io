@@ -1,3 +1,9 @@
+This is the old version of my blog http://www.enotogorsk.ru (2014-2017)
+=======================================================================
+
+I have since changed it to use a different platform
+===================================================
+
 ringtail1402.github.io
 ======================
 
